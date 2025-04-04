@@ -20,7 +20,6 @@ def main():
     Path(folder_path).mkdir(parents=True, exist_ok=True)
     print(f"Starting screen captures. Saving to {folder_path}.")
 
-    screenshots = 0
     for _ in range(1000):
         image = capture_screenshot()
         image.save(f"{folder_path}/{datetime.now().strftime("%Y%m%d%H%M%S")}.png")
