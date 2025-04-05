@@ -9,7 +9,7 @@ def capture_screenshot() -> ImageGrab:
     width, height = monitor_size()
 
     image = ImageGrab.grab(
-        bbox=(0, 0, width, height)
+        bbox=(0, 96, width, height - 55)
     )
     max_width = 1920
     scale_factor = max_width / width
