@@ -24,10 +24,12 @@ def main():
     Path(folder_path).mkdir(parents=True, exist_ok=True)
     print(f"Starting screen captures. Saving to {folder_path}.")
 
-    for _ in range(1000):
+    interval = 15
+
+    for _ in range(int(30*60/interval)):
         image = capture_screenshot()
         image.save(f"{folder_path}/{datetime.now().strftime("%Y%m%d%H%M%S")}.png")
-        sleep(15)
+        sleep(interval)
 
 
 if __name__ == "__main__":
