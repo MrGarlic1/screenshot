@@ -11,7 +11,7 @@ def capture_screenshot() -> ImageGrab:
     image = ImageGrab.grab(
         bbox=(0, 96, width, height - 55)
     )
-    image.show()
+
     max_width = 1920
     scale_factor = max_width / width
     image = image.resize(size=(round(width * scale_factor), round(height * scale_factor)))
