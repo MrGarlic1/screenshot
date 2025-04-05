@@ -7,17 +7,9 @@ from time import sleep
 
 def capture_screenshot() -> ImageGrab:
     width, height = monitor_size()
-    target_ratio = 16/9
-
-    if width/height < target_ratio:  # Screen too tall (e.g 16:10, 4:3)
-        target_height = width * 9 / 16
-        target_width = width
-    else:  # Screen too wide (e.g. 21:9, ultrawide)
-        target_width = height * 16 / 9
-        target_height = height
 
     image = ImageGrab.grab(
-        bbox=(round((width - target_width)/2), round((height - target_height)//2), round(width - (width - target_width)//2), round(height - (height - target_height)//2))
+        bbox=(0, 0, width, height)
     )
     max_width = 1920
     scale_factor = max_width / width
