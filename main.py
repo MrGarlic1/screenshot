@@ -12,9 +12,9 @@ def capture_screenshot() -> ImageGrab:
         bbox=(0, 96, width, height - 55)
     )
 
-    max_width = 1920
-    scale_factor = max_width / width
-    image = image.resize(size=(round(width * scale_factor), round(height * scale_factor)))
+    # max_width = 1920
+    # scale_factor = max_width / width
+    # image = image.resize(size=(round(width * scale_factor), round(height * scale_factor)))
     return image
 
 
