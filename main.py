@@ -17,7 +17,7 @@ def capture_screenshot() -> ImageGrab:
         target_height = height
 
     image = ImageGrab.grab(
-        bbox=((width - target_width)//2, (height - target_height)//2, width - (width - target_width)//2, height - (height - target_height)//2)
+        bbox=(round((width - target_width)/2), round((height - target_height)//2), round(width - (width - target_width)//2), round(height - (height - target_height)//2))
     )
     max_width = 1920
     scale_factor = max_width / width
